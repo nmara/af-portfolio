@@ -102,21 +102,21 @@ transition: 0.5s;
   width: 24.88vw;
   margin-top: 2vh;
   margin-left: 35%;
-  background-image: url("../../img/about--bg.png");
+  background-image: url("../img/about--bg.png");
 }
 .hero__nav__item.gallery {
   height: 14vw;
   width: 21vw;
   margin-top: calc(4vh);
   margin-left: 18%;
-  background-image: url("../../img/gallery--bg.jpg");
+  background-image: url("../img/gallery--bg.jpg");
 }
 .hero__nav__item.recordings {
   height: 21.3vw;
   width: 14.23vw;
   margin-top: calc(-14vw + 2vh);
   margin-left: 58%;
-  background-image: url("../../img/recordings--bg.jpg");
+  background-image: url("../img/recordings--bg.jpg");
 }
 .hero__nav__item.contact {
   height: 13.73vw;
@@ -124,5 +124,5 @@ transition: 0.5s;
   margin-top: calc(-7vw);
   margin-left: 36%;
   margin-bottom: 15px;
-  background-image: url("../../img/contact--bg.jpg");
+  background-image: url("../img/contact--bg.jpg");
 }

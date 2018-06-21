@@ -1,0 +1,45 @@
+.recordings__container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+.recordings__bg {
+  height: 100%;
+  width: 30%;
+  background: url("../img/audio--bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.recordings__content {
+  height: 100%;
+  width: 70%;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.recordings__title {
+  margin-bottom: 10vh;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.recordings__audio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.recordings__audio__item {
+  margin-bottom: 8vh;
+  width: 70%;
+  .recordings__audio__item__title {
+    border-bottom: 1px solid #133131;
+    padding-bottom: 1vh;
+  }
+  audio {
+    width: 100%;
+  }
+}
