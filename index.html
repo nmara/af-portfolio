@@ -18,12 +18,12 @@
           <p>Anna Fijałkowska</p>
         </div>
         <div class="nav">
-          <ul class="nav__content">
-            <li class="nav__item"><a href="">Główna</a></li>
-            <li class="nav__item"><a href="">Biografia</a></li>
-            <li class="nav__item"><a href="">Galeria</a></li>
-            <li class="nav__item"><a href="">Nagrania</a></li>
-            <li class="nav__item"><a href="">Kontakt</a></li>
+          <ul class="nav__content" id="nav-content">
+            <li class="nav__item"><a class="nav__item__link" data-nav="hero" onclick="correctNavScroll(this)">Główna</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="about"  onclick="correctNavScroll(this)">Biografia</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="gallery" onclick="correctNavScroll(this)">Galeria</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="recordings" onclick="correctNavScroll(this)">Nagrania</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="contact" onclick="correctNavScroll(this)">Kontakt</a></li>
           </ul>
         </div>
       </div>
@@ -32,10 +32,14 @@
   <section id="hero">
     <div class="hero__content">
       <div class="hero__bg">
-        <h1 class="hero__bg__title">Anna Fijałkowska</h1>
+        <!-- <h1 class="hero__bg__title">
+          Anna
+          <br>
+          Fijałkowska
+        </h1> -->
       </div>
       <div class="hero__nav">
-        <div class="hero__nav__item about">
+        <div class="hero__nav__item about" data-nav="about"  onclick="correctNavScroll(this)">
           <div class="hero__nav__item__bg"></div>
           <div class="hero__nav__item__content">
             <p class="hero__nav__item__content__title">
@@ -43,7 +47,7 @@
             </p>
           </div>
         </div>
-        <div class="hero__nav__item gallery">
+        <div class="hero__nav__item gallery" data-nav="gallery" onclick="correctNavScroll(this)">
           <div class="hero__nav__item__bg"></div>
           <div class="hero__nav__item__content">
             <p class="hero__nav__item__content__title">
@@ -51,7 +55,7 @@
             </p>
           </div>
         </div>
-        <div class="hero__nav__item recordings">
+        <div class="hero__nav__item recordings" data-nav="recordings" onclick="correctNavScroll(this)">
           <div class="hero__nav__item__bg"></div>
           <div class="hero__nav__item__content">
             <p class="hero__nav__item__content__title">
@@ -59,7 +63,7 @@
             </p>
           </div>
         </div>
-        <div class="hero__nav__item contact">
+        <div class="hero__nav__item contact" data-nav="contact" onclick="correctNavScroll(this)">
           <div class="hero__nav__item__bg"></div>
           <div class="hero__nav__item__content">
             <p class="hero__nav__item__content__title">
@@ -73,23 +77,117 @@
   <section id="about">
     <div class="about__content">
       <div class="container">
-        <h2>Anna Fijałkowska</h2>
-        <p>
+        <h2 class="about__title">Anna Fijałkowska</h2>
+        <p class="about__desc">
           Ukończyła studia na Uniwersytecie Muzycznym Fryderyka Chopina na Wydziale Edukacji Muzycznej, specjalność Muzyka Kościelna oraz na Wydziale Wokalnym (dyplom z wyróżnieniem). W trakcie studiów podjęła pracę w Chórze Filharmonii Narodowej. Jako solistka chóru współpracowała z takimi dyrygentami jak: Antoni Wit, Henryk Wojnarowski, Massimiliano Caldi, Victor Pablo Perez, Łukasz Borowicz, Krzysztof Urbański. W 2014 wykonywała partię solo altu podczas światowej premiery kompozycji Crying in the Wilderness Alexandra Raskatova (Istambuł, dyr. Andres Mustonen).
         </p>
-        <p>
+        <p class="about__desc">
           W czerwcu 2012 zadebiutowała na deskach Teatru Wielkiego- Opery Narodowej w studenckim spektaklu Sen Nocy Letniej Benjamina Brittena (partia Hipolity). W lutym 2013 wystąpiła w studenckiej realizacji opery Giacomo Pucciniego Suor Angelica jako Zia Principessa. W marcu 2014 jako Ottavia wzięła udział w spektaklu powstałym w kooperacji ze studentami Wydziału Reżyserii Akademii Teatralnej, Sceny z Koronacji Poppei do muzyki Claudio Monteverdiego. Od lat współpracuje z zespołem muzyki dawnej La Tempesta. Od jesieni 2016 roku współpracuje z norweskim zespołem Trondheim Vocalensamble.
         </p>
-        <p>
-          W roku 2012 została finalistką ogólnopolskiego Konkursu dla Młodych Wykonawców Muzyki XX i XXI wieku. Brała udział w kursach mistrzowskich prowadzonych przez Anitę Garanča, Urszulę Kryger, Agnieszkę Rehlis oraz Doris i Richarda Cross.
+        <p class="about__desc">
+          W roku 2012 została finalistką ogólnopolskiego Konkursu dla Młodych Wykonawców Muzyki XX i XXI wieku. Brała udział w kursach mistrzowskich prowadzonych przez Anitę Garanca, Urszulę Kryger, Agnieszkę Rehlis oraz Doris i Richarda Cross.
         </p>
       </div>
     </div>
   </section>
   <section id="gallery">
-
+    <div id="myModal" class="modal">
+        <div class="modal_content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 7</div>
+                <img src="img/gallery-1.jpg">
+                <div class="description">
+                    <p>Koronacja Poppei</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 /7</div>
+                <img src="img/gallery-2.jpg">
+                <div class="description">
+                    <p>Requiem Mozarta</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 7</div>
+                <img src="img/gallery-3.jpg">
+                <div class="description">
+                    <p>Bernstein</p>
+                    <p>West Side Story</p>
+                    <p>FN Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 7</div>
+                <img src="img/gallery-4.jpg">
+                <div class="description">
+                  <p>Monteverdi</p>
+                  <p>Koronacja Poppei</p>
+                  <p>AT Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 7</div>
+                <img src="img/gallery-5.jpg">
+                <div class="description">
+                  <p>Puccini</p>
+                  <p>Siostra Angelica</p>
+                  <p>UMFC Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 7</div>
+                <img src="img/gallery-6.jpg">
+                <div class="description">
+                  <p>Bach</p>
+                  <p>Kantata</p>
+                  <p>UW Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 7</div>
+                <img src="img/gallery-7.jpg" style="100%" alt="jsasfhs">
+                <div class="description">
+                  <p>Britten</p>
+                  <p>Sen nocy letniej</p>
+                  <p>Teatr Wielki Warszawa</p>
+                </div>
+            </div>
+            <div class="caption_container">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
   </section>
-  <section id="audio"></section>
+  <section id="recordings">
+    <div class="recordings__content">
+      <h2 class="recordings__title">Nagrania</h2>
+      <div class="recordings__audio">
+        <div class="recordings__audio__item">
+          <h4>Britten - A cradle song</h4>
+          <audio controls>
+              <source src="audio/britten_a_cradle_song.mp3" type="audio/mpeg">
+              Twoja przeglądarka nie obsługuje formatu audio.
+          </audio>
+        </div>
+        <div class="recordings__audio__item">
+          <h4>Haendel Dejanira - Where shall I fly</h4>
+          <audio controls>
+              <source src="audio/where_shall_I_fly.mp3" type="audio/mpeg">
+              Twoja przeglądarka nie obsługuje formatu audio.
+          </audio>
+        </div>
+        <div class="recordings__audio__item">
+          <h4>Rossini - Tancredi - Di tanti palpiti</h4>
+          <audio controls>
+              <source src="audio/di_tanti_palpiti.mp3" type="audio/mpeg">
+              Twoja przeglądarka nie obsługuje formatu audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="contact"></section>
   <footer></footer>
 <script src="node_modules/aos/dist/aos.js"></script>
