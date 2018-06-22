@@ -1,29 +1,48 @@
 .recordings__container {
   display: flex;
-  width: 100%;
-  height: calc(100vh - 50px);
+  margin-top: 70px!important;
+  min-height: calc(100vh - 100px);
+  align-items: center;
+  justify-content: space-between;
 }
 .recordings__bg {
   height: 100%;
-  width: 30%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.recordings__bg__mainPhoto-bg {
+  height: 41vw;
+  width: 15vw;
+  background-color: #18453E;
+  // background: url("../img/audio2--bg.jpg") no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
+}
+.recordings__bg__mainPhoto {
+  height: 37.5vw;
+  width: 25vw;
+  margin-left: -12vw;
   background: url("../img/audio--bg.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
 }
 .recordings__content {
   height: 100%;
-  width: 70%;
-  padding-top: 10vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .recordings__title {
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 .recordings__audio {
   width: 100%;
@@ -34,12 +53,60 @@
 }
 .recordings__audio__item {
   margin-bottom: 8vh;
-  width: 70%;
+  width: 80%;
   .recordings__audio__item__title {
-    border-bottom: 1px solid #133131;
-    padding-bottom: 1vh;
+    border-bottom: 1px solid #AB81AB;
+    padding-bottom: 2vh;
+    margin-bottom: 1vh;
+    font-weight: 300;
+    word-spacing: 0.1vw;
   }
   audio {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .recordings__container {
+    padding: 12vh 0;
+    align-items: flex-start;
+  }
+  .recordings__content {
+    width: 60%;
+    justify-content: flex-start;
+  }
+  .recordings__title {
+    margin-bottom: 10vh;
+    letter-spacing: 2px;
+  }
+  .recordings__audio {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .recordings__container {
+    padding: 6vh 0;
+    align-items: flex-start;
+  }
+  .recordings__content {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .recordings__title {
+    margin-bottom: 6vh;
+    letter-spacing: 2px;
+  }
+  .recordings__audio {
+    width: 100%;
+  }
+  .recordings__bg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .recordings__container {
+    padding: 8vh 0 6vh;
+  }
+  .recordings__title {
+    margin-bottom: 10vh;
   }
 }

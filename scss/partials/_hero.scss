@@ -3,41 +3,11 @@
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #133131;//#05282c;
-//   background: rgba(19,49,49,1);
-// background: -moz-linear-gradient(-45deg, rgba(19,49,49,1) 0%, rgba(14,36,36,1) 100%);
-// background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(19,49,49,1)), color-stop(100%, rgba(14,36,36,1)));
-// background: -webkit-linear-gradient(-45deg, rgba(19,49,49,1) 0%, rgba(14,36,36,1) 100%);
-// background: -o-linear-gradient(-45deg, rgba(19,49,49,1) 0%, rgba(14,36,36,1) 100%);
-// background: -ms-linear-gradient(-45deg, rgba(19,49,49,1) 0%, rgba(14,36,36,1) 100%);
-// background: linear-gradient(135deg, rgba(19,49,49,1) 0%, rgba(14,36,36,1) 100%);
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#133131', endColorstr='#0e2424', GradientType=1 );
-
-background: #133030;
-background: -moz-linear-gradient(-45deg, #133030 0%, #0e2424 57%, #0e2525 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, #133030), color-stop(57%, #0e2424), color-stop(100%, #0e2525));
-background: -webkit-linear-gradient(-45deg, #133030 0%, #0e2424 57%, #0e2525 100%);
-background: -o-linear-gradient(-45deg, #133030 0%, #0e2424 57%, #0e2525 100%);
-background: -ms-linear-gradient(-45deg, #133030 0%, #0e2424 57%, #0e2525 100%);
-background: linear-gradient(135deg, #133030 0%, #0e2424 57%, #0e2525 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#133030', endColorstr='#0e2525', GradientType=1 );
-}
-.hero__bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  z-index: 1;
-  .hero__bg__title {
-    text-transform: uppercase;
-    font-size: 200px;
-    font-weight: 700;
-    letter-spacing: 15px;
-    color: #fff;
-    opacity: 0.6;
-    font-family: 'Open Sans';
-  }
+  background-color: #18453E;
+  // background: url("../img/home--bg.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
 }
 .hero__nav {
   z-index: 2;
@@ -48,17 +18,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#133030', end
 .hero__nav__item {
   position: relative;
   cursor: pointer;
-  border-radius: 10%;
-//   -webkit-box-shadow: 0px 0px 59px 16px rgba(14,36,36,1);
-// -moz-box-shadow: 0px 0px 59px 16px rgba(14,36,36,1);
-// box-shadow: 0px 0px 59px 16px rgba(14,36,36,1);
--webkit-box-shadow: 0px 0px 18px 9px rgba(14,36,36,1);
--moz-box-shadow: 0px 0px 18px 9px rgba(14,36,36,1);
-box-shadow: 0px 0px 18px 9px rgba(14,36,36,1);
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-transition: 0.5s;
+  border-radius: 5%;
+  box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   .hero__nav__item__bg {
     width: 100%;
     height: 100%;
@@ -66,6 +30,8 @@ transition: 0.5s;
     opacity: 0;
     z-index: 2;
     visibility: hidden;
+    border-radius: 5%;
+    transition: 0.5s;
   }
   .hero__nav__item__content {
     z-index: 3;
@@ -77,24 +43,30 @@ transition: 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
     p {
       font-size: 30px;
       letter-spacing: 2px;
       font-weight: 700;
       text-transform: uppercase;
+      color: #A77574; //#AD827F;
     }
   }
 }
+.hero__nav__item:first-child {
+  box-shadow: 0vw 1.8vw 4vw -.5vw rgba(0,0,0,.2);
+}
 .hero__nav__item:hover {
+  opacity: 1;
   .hero__nav__item__bg {
+    opacity: 0.3;
     visibility: visible;
-    opacity: 0.6;
   }
   .hero__nav__item__content {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
   }
 }
 .hero__nav__item.about {
@@ -105,24 +77,24 @@ transition: 0.5s;
   background-image: url("../img/about--bg.png");
 }
 .hero__nav__item.gallery {
-  height: 14vw;
-  width: 21vw;
+  height: 17vw;
+  width: 25.41vw;
   margin-top: calc(4vh);
-  margin-left: 18%;
+  margin-left: 10%;
   background-image: url("../img/gallery--bg.jpg");
 }
 .hero__nav__item.recordings {
   height: 21.3vw;
   width: 14.23vw;
-  margin-top: calc(-14vw + 2vh);
-  margin-left: 58%;
+  margin-top: calc(-20vw + 2vh);
+  margin-left: 70%;
   background-image: url("../img/recordings--bg.jpg");
 }
 .hero__nav__item.contact {
   height: 13.73vw;
   width: 20.48vw;
-  margin-top: calc(-7vw);
-  margin-left: 36%;
+  margin-top: calc(-11vw);
+  margin-left: 40%;
   margin-bottom: 15px;
   background-image: url("../img/contact--bg.jpg");
 }

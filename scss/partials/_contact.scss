@@ -1,0 +1,37 @@
+.contact__content {
+  min-height: calc(100vh - 100px);
+  margin-top: 70px;
+  background: url("../img/contact-pg-bg.jpg") no-repeat;
+  background-position: right center;
+  background-size: cover;
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact__title {
+  margin-bottom: 6vh;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 60%;
+  text-align: center;
+}
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.contact__details__item {
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+  word-spacing: 0.1vw;
+  display: flex;
+  align-items: center;
+  i {
+    font-size: 40px;
+    margin-right: 1vw;
+  }
+}
