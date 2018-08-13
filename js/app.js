@@ -19,6 +19,16 @@ function changePage(el) {
 }
 
 // Gallery
+function openModal() {
+    document.getElementById('myModal').style.display = "flex";
+    document.querySelector('.header__content').style.position = "static";
+}
+
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+    document.querySelector('.header__content').style.position = "fixed";
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

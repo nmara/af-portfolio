@@ -7,48 +7,259 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anna Fijałkowska</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <section id="hero">
-    <div class="hero__content">
-      <div class="hero__nav">
-        <div class="hero__nav__item about" data-nav="about"  onclick="changePage(this)">
-          <div class="hero__nav__item__bg"></div>
-          <div class="hero__nav__item__content">
-            <p class="hero__nav__item__content__title">
-              Biografia
-            </p>
+  <header>
+    <div class="header__content">
+      <div class="container">
+        <div class="logo">
+          <p>Anna Fijałkowska</p>
+        </div>
+        <div class="nav">
+          <ul class="nav__content" id="nav-content">
+            <li class="nav__item"><a class="nav__item__link" href="index.html">Główna</a></li>
+            <li class="nav__item"><a class="nav__item__link" href="about.html">Biografia</a></li>
+            <li class="nav__item"><a class="nav__item__link" href="gallery.html">Galeria</a></li>
+            <li class="nav__item"><a class="nav__item__link" href="recordings.html">Nagrania</a></li>
+            <li class="nav__item"><a class="nav__item__link" href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-line"></div>
+    <div class="hero__container">
+      <div class="hero-bg"></div>
+      <div class="hero-shape-bg-top"></div>
+      <div class="hero-shape-bg-btm"></div>
+      <div class="hero-logo">
+        <p>An<span style="transform: scaleX(-1);display:inline-block;filter: FlipH;margin-left: -15px;">n</span>a</p>
+        <span class="little-logo">Fijałkowska</span>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="about__content">
+      <div class="container">
+        <div class="about__photo ipad">
+          <div class="about__photo__container">
           </div>
         </div>
-        <div class="hero__nav__item gallery" data-nav="gallery" onclick="changePage(this)">
-          <div class="hero__nav__item__bg"></div>
-          <div class="hero__nav__item__content">
-            <p class="hero__nav__item__content__title">
-              Galeria
-            </p>
+        <div class="about__bio">
+          <h2 class="about__title">Anna Fijałkowska</h2>
+          <p class="about__desc">
+            Ukończyła studia na Uniwersytecie Muzycznym Fryderyka Chopina na Wydziale Edukacji Muzycznej, specjalność Muzyka Kościelna oraz na Wydziale Wokalnym (dyplom z wyróżnieniem). W trakcie studiów podjęła pracę w Chórze Filharmonii Narodowej. Jako solistka chóru współpracowała z takimi dyrygentami jak: Antoni Wit, Henryk Wojnarowski, Massimiliano Caldi, Victor Pablo Perez, Łukasz Borowicz, Krzysztof Urbański. W 2014 wykonywała partię solo altu podczas światowej premiery kompozycji Crying in the Wilderness Alexandra Raskatova (Istambuł, dyr. Andres Mustonen).
+          </p>
+          <p class="about__desc">
+            W czerwcu 2012 zadebiutowała na deskach Teatru Wielkiego- Opery Narodowej w studenckim spektaklu Sen Nocy Letniej Benjamina Brittena (partia Hipolity). W lutym 2013 wystąpiła w studenckiej realizacji opery Giacomo Pucciniego Suor Angelica jako Zia Principessa. W marcu 2014 jako Ottavia wzięła udział w spektaklu powstałym w kooperacji ze studentami Wydziału Reżyserii Akademii Teatralnej, Sceny z Koronacji Poppei do muzyki Claudio Monteverdiego. Od lat współpracuje z zespołem muzyki dawnej La Tempesta. Od jesieni 2016 roku współpracuje z norweskim zespołem Trondheim Vocalensamble.
+          </p>
+          <p class="about__desc">
+            W roku 2012 została finalistką ogólnopolskiego Konkursu dla Młodych Wykonawców Muzyki XX i XXI wieku. Brała udział w kursach mistrzowskich prowadzonych przez Anitę Garanca, Urszulę Kryger, Agnieszkę Rehlis oraz Doris i Richarda Cross.
+          </p>
+          <div class="about__pdf">
+            <a href="pdf/Anna_Fijalkowska.pdf" target="_blank" class="about__pdf__btn">Pobierz PDF</a>
           </div>
+          <!-- <div class="about__bio-bg"></div> -->
         </div>
-        <div class="hero__nav__item recordings" data-nav="recordings" onclick="changePage(this)">
-          <div class="hero__nav__item__bg"></div>
-          <div class="hero__nav__item__content">
-            <p class="hero__nav__item__content__title">
-              Nagrania
-            </p>
-          </div>
-        </div>
-        <div class="hero__nav__item contact" data-nav="contact" onclick="changePage(this)">
-          <div class="hero__nav__item__bg"></div>
-          <div class="hero__nav__item__content">
-            <p class="hero__nav__item__content__title">
-              Kontakt
-            </p>
+        <div class="about__bio-bg"></div>
+        <div class="about__photo regular">
+          <div class="about__photo__container">
           </div>
         </div>
       </div>
     </div>
   </section>
+  <section id="gallery">
+    <div class="gallery__container">
+      <div class="gallery__photo" onclick="openModal();currentSlide(1)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Zobacz galerię</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(2)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Zobacz galerię</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(3)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Bernstein</p>
+            <p class="title">West Side Story</p>
+            <p>FN Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(4)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Monteverdi</p>
+            <p class="title">Koronacja Poppei</p>
+            <p>AT Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(5)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Puccini</p>
+            <p class="title">Siostra Angelica</p>
+            <p>UMFC Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(6)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Bach</p>
+            <p class="title">Kantata</p>
+            <p>UW Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(7)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Britten</p>
+            <p class="title">Sen nocy letniej</p>
+            <p>Teatr Wielki Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(8)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Sorozabal</p>
+            <p class="title">La tabernera del puerto</p>
+            <p>FN Warszawa</p>
+          </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal_content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 8</div>
+                <img class="modal__photo" src="img/gallery-1.jpg">
+                <div class="description">
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 8</div>
+                <img class="modal__photo" src="img/gallery-2.jpg">
+                <div class="description">
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 8</div>
+                <img class="modal__photo" src="img/gallery-3.jpg">
+                <div class="description">
+                    <p class="description__title">Bernstein - West Side Story</p>
+                    <p class="description__place">FN Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 8</div>
+                <img class="modal__photo" src="img/gallery-4.jpg">
+                <div class="description">
+                  <p class="description__title">Monteverdi - Koronacja Poppei</p>
+                  <p class="description__place">AT Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 8</div>
+                <img class="modal__photo" src="img/gallery-5.jpg">
+                <div class="description">
+                  <p class="description__title">Puccini - Siostra Angelica</p>
+                  <p class="description__place">UMFC Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img class="modal__photo" src="img/gallery-6.jpg">
+                <div class="description">
+                  <p class="description__title">Bach - Kantata</p>
+                  <p class="description__place">UW Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img class="modal__photo" src="img/gallery-7.jpg">
+                <div class="description">
+                  <p class="description__title">Britten - Sen nocy letniej</p>
+                  <p class="description__place">Teatr Wielki Warszawa</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img class="modal__photo" src="img/gallery-8.jpg">
+                <div class="description">
+                  <p class="description__title">Sorozabal - La tabernera del puerto</p>
+                  <p class="description__place">FN Warszawa</p>
+                </div>
+            </div>
+            <div class="caption_container">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+  <section id="recordings">
+    <div class="recordings__container container">
+      <div class="recordings__bg">
+        <div class="recordings__bg__mainPhoto-bg"></div>
+        <div class="recordings__bg__mainPhoto-bg-left"></div>
+        <div class="recordings__bg__mainPhoto"></div>
+      </div>
+      <div class="recordings__content">
+        <h2 class="recordings__title">Nagrania</h2>
+        <div class="recordings__audio">
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Haendel - Dejanira - Where shall I fly</h4>
+            <audio controls>
+                <source src="audio/where_shall_I_fly.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje formatu audio.
+            </audio>
+          </div>
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Rossini - Tancredi - Di tanti palpiti</h4>
+            <audio controls>
+                <source src="audio/di_tanti_palpiti.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje formatu audio.
+            </audio>
+          </div>
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Britten - A cradle song</h4>
+            <audio controls>
+                <source src="audio/britten_a_cradle_song.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje formatu audio.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact__content">
+      <h2 class="contact__title">Kontakt</h2>
+      <div class="contact__details">
+          <div class="contact__details__item">
+            <i class="fas fa-mobile-alt"></i>
+            <p class="contact__details__desc">+48 605 105 426</p>
+          </div>
+          <div class="contact__details__item">
+            <i class="fas fa-envelope"></i>
+            <p class="contact__details__desc">fijalkowska.anna@gmail.com</p>
+          </div>
+      </div>
+      <div class="contact__bg-top"></div>
+      <div class="contact__bg-btm"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer__container">
+      <div class="footer__text container">
+        <p><a href="https://github.com/nmara" target="_blank">Website by Agnieszka Czekała</a></p>
+        <p><a href="http://shuum.pl/" target="_blank">Photo by shuum</a></p>
+      </div>
+    </div>
+  </footer>
   <script src="node_modules/aos/dist/aos.js"></script>
   <script src="js/app.js"></script>
 </body>

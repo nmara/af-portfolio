@@ -1,37 +1,80 @@
 .contact__content {
-  min-height: calc(100vh - 100px);
-  margin-top: 70px;
-  background: url("../img/contact-pg-bg.jpg") no-repeat;
-  background-position: right center;
-  background-size: cover;
-  padding-top: 20vh;
+  margin-top: 30vh;
+  padding-bottom: 10vh;
+  margin-bottom: 8vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contact__bg-top {
+  position: absolute;
+  bottom: 8vh;
+  right: 8%;
+  width: 0;
+  height: 0;
+  border-left: 75vw solid transparent;
+  // border-left: 20vw solid transparent;
+  border-bottom: 25vw solid #A55C56;
+  opacity: 0.2;
+}
+.contact__bg-btm {
+  position: absolute;
+  bottom: 2vh;
+  left: 8%;
+  width: 0;
+  height: 0;
+  border-right: 45vw solid transparent;
+  // border-left: 20vw solid transparent;
+  // border-bottom: 15vw solid #A55C56;
+  border-bottom: 30vw solid #A55C56;
+  opacity: 0.3;
+  z-index: -1;
 }
 .contact__title {
-  margin-bottom: 6vh;
+  margin-bottom: 15vh;
   font-size: 50px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  width: 60%;
+  letter-spacing: 8px;
+  width: 100%;
   text-align: center;
 }
 .contact__details {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
+  // flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-bottom: 10vh;
+  position: relative;
+  z-index: 1;
 }
 .contact__details__item {
-  padding-bottom: 2vh;
   margin-bottom: 2vh;
   word-spacing: 0.1vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 25vh;
+  // border: 1px solid #000;
+  // background-color: rgba(87, 100, 106, 0.5);
+  // background-color: rgba(165, 92, 86, 0.5);
+  // background-color: #D2ADAA;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
+-moz-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
+box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
   i {
-    font-size: 40px;
-    margin-right: 1vw;
+    font-size: 110px;
+    margin-right: 4vw;
+    color: #131218;
+    opacity: 0.9;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #131218;
   }
 }

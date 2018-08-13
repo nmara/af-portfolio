@@ -1,9 +1,10 @@
 .recordings__container {
   display: flex;
-  margin-top: 70px!important;
+  margin-top: 20vh!important;
   min-height: calc(100vh - 100px);
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .recordings__bg {
   height: 100%;
@@ -12,22 +13,40 @@
   align-items: center;
 }
 .recordings__bg__mainPhoto-bg {
-  height: 41vw;
-  width: 15vw;
-  background-color: #18453E;
-  // background: url("../img/audio2--bg.jpg") no-repeat;
-  // background-position: center;
-  // background-size: cover;
-  box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
+  position: absolute;
+  top: 2vh;
+  right: -8%;
+  width: 0;
+  height: 0;
+  border-left: 75vw solid transparent;
+  // border-left: 20vw solid transparent;
+  border-top: 25vw solid #A55C56;
+  opacity: 0.3;
+  // z-index: -1;
+}
+.recordings__bg__mainPhoto-bg-left {
+  position: absolute;
+  top: -2vh;
+  left: -8%;
+  width: 0;
+  height: 0;
+  border-right: 45vw solid transparent;
+  // border-left: 20vw solid transparent;
+  // border-bottom: 15vw solid #A55C56;
+  border-top: 30vw solid #A55C56;
+  opacity: 0.2;
 }
 .recordings__bg__mainPhoto {
+  z-index: 3;
   height: 37.5vw;
   width: 25vw;
-  margin-left: -12vw;
+  // margin-left: -12vw;
   background: url("../img/audio--bg.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
+  position: relative;
+  z-index: -1;
 }
 .recordings__content {
   height: 100%;
@@ -38,11 +57,12 @@
   align-items: center;
 }
 .recordings__title {
-  margin-bottom: 6vh;
-  font-size: 35px;
+  margin-bottom: 16vh;
+  font-size: 50px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 12px;
   text-align: center;
+  margin-top: 13vh;
 }
 .recordings__audio {
   width: 100%;
@@ -54,8 +74,9 @@
 .recordings__audio__item {
   margin-bottom: 8vh;
   width: 80%;
+    background-color: #000;
   .recordings__audio__item__title {
-    border-bottom: 1px solid #AB81AB;
+    border-bottom: 1px solid #A55C56;
     padding-bottom: 2vh;
     margin-bottom: 1vh;
     font-weight: 300;
@@ -63,6 +84,7 @@
   }
   audio {
     width: 100%;
+    background-color: #000;
   }
 }
 @media only screen and (max-width: 1600px) {

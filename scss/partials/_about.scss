@@ -1,15 +1,23 @@
 .about__content {
   min-height: calc(100vh - 100px);
-  margin-top: 70px;
-  padding-top: 8vh;
-  padding-bottom: 4vh;
+  margin-top: 30vh;
+  padding-top: 16vh;
+  padding-bottom: 20vh;
+  position: relative;
+  background-color: rgba(165, 92, 86, 0.4);
+  // background-color: rgba(87, 100, 106, 0.1);
+  // border: 1px solid red;
   .container {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    // border: 1px solid red;
   }
 }
 .about__photo {
-  width: 50%;
+  width: 40%;
+  height: 70vh;
+  // margin-top: 6vh;
 }
 .about__photo.ipad {
   display: none;
@@ -19,33 +27,51 @@
   height: 100%;
   background-image: url("../img/gallery-1.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-position: top right;
+  background-size: contain;
 }
 .about__bio {
-  width: 35%;
+  width: 60%;
   padding-bottom: 15px;
+  position: relative;
+  // background-color: #fff;
+  opacity: 1;
+  z-index: 2;
+}
+.about__bio-bg {
+  position: absolute;
+  bottom: -5vh;
+  left: -5vh;
+  width: 0;
+  height: 0;
+  border-right: 75vw solid transparent;
+  // border-left: 70vh solid transparent;
+  // border-bottom: 85vh solid #A55C56;
+  opacity: 0.3;
+  z-index: 1;
 }
 .about__title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
   text-align: left;
   margin-bottom: 3vh;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
 }
 .about__desc {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   margin-bottom: 3vh;
   font-weight: 300;
+  z-index: 10;
 }
 .about__pdf {
   float: right;
-  margin-top: 3vh;
+  margin-top: 6vh;
 }
 .about__pdf__btn {
-  background-color: #fff;
+  background-color: #000;
   border: 1px solid #000;
   font-size: 12px;
   line-height: 12px;
@@ -54,12 +80,12 @@
   padding: 15px 50px;
   cursor: pointer;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   transition: 0.5s;
 }
 .about__pdf__btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 @media only screen and (max-width: 1450px) {
   .about__content {
