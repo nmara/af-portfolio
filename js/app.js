@@ -4,12 +4,150 @@ AOS.init();
 // stop audio if other is playing
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
+    var customAudios = document.getElementsByClassName('audioplayer');
     for(var i = 0, len = audios.length; i < len;i++){
         if(audios[i] != e.target){
             audios[i].pause();
+            customAudios[i].getElementsByClassName('pButton')[0].classList.remove("pause");
+            customAudios[i].getElementsByClassName('pButton')[0].classList.add("play");
         }
     }
 }, true);
+
+function customAudioPlayer(audioEl, customAudioEl) {
+  // var music = document.getElementById('music'); // id for audio element
+  var duration = audioEl.duration; // Duration of audio clip, calculated here for embedding purposes
+
+  var pButton = customAudioEl.getElementsByClassName('pButton')[0]; // play button
+  var playhead = customAudioEl.getElementsByClassName('playhead')[0]; // playhead
+  var timeline = customAudioEl.getElementsByClassName('timeline')[0]; // timeline
+
+  // timeline width adjusted for playhead
+  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+  // play button event listenter
+  pButton.addEventListener("click", play);
+
+  // timeupdate event listener
+  audioEl.addEventListener("timeupdate", timeUpdate, false);
+
+  // makes timeline clickable
+  timeline.addEventListener("click", function(event) {
+      moveplayhead(event);
+      audioEl.currentTime = duration * clickPercent(event);
+  }, false);
+
+  // returns click as decimal (.77) of the total timelineWidth
+  function clickPercent(event) {
+      return (event.clientX - getPosition(timeline)) / timelineWidth;
+  }
+
+  // makes playhead draggable
+  playhead.addEventListener('mousedown', mouseDown, false);
+  window.addEventListener('mouseup', mouseUp, false);
+
+  // Boolean value so that audio position is updated only when the playhead is released
+  var onplayhead = false;
+
+  // mouseDown EventListener
+  function mouseDown() {
+      onplayhead = true;
+      window.addEventListener('mousemove', moveplayhead, true);
+      audioEl.removeEventListener('timeupdate', timeUpdate, false);
+  }
+
+  // mouseUp EventListener
+  // getting input from all mouse clicks
+  function mouseUp(event) {
+      if (onplayhead == true) {
+          moveplayhead(event);
+          window.removeEventListener('mousemove', moveplayhead, true);
+          // change current time
+          audioEl.currentTime = duration * clickPercent(event);
+          audioEl.addEventListener('timeupdate', timeUpdate, false);
+      }
+      onplayhead = false;
+  }
+  // mousemove EventListener
+  // Moves playhead as user drags
+  function moveplayhead(event) {
+      var newMargLeft = event.clientX - getPosition(timeline);
+
+      if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+          playhead.style.marginLeft = newMargLeft + "px";
+      }
+      if (newMargLeft < 0) {
+          playhead.style.marginLeft = "0px";
+      }
+      if (newMargLeft > timelineWidth) {
+          playhead.style.marginLeft = timelineWidth + "px";
+      }
+  }
+  var songTime = customAudioEl.getElementsByClassName("showTime")[0];
+  songTime.innerHTML = "00:00";
+  // timeUpdate
+  // Synchronizes playhead position with current point in audio
+  function timeUpdate() {
+      var playPercent = timelineWidth * (audioEl.currentTime / duration);
+      playhead.style.marginLeft = playPercent + "px";
+      if (audioEl.currentTime == duration) {
+        pButton.classList.remove("pause");
+        pButton.classList.add("play");
+      }
+      var showTime = Math.round(audioEl.currentTime);
+      function formatTime() {
+        var minutes = Math.floor(audioEl.currentTime / 60);
+        var seconds = Math.floor(audioEl.currentTime % 60);
+
+        if(minutes < 10) {
+          minutes = '0' + minutes;
+        }
+
+        if(seconds < 10) {
+          seconds = '0' + seconds;
+        }
+
+        var outcome = minutes + ":" + seconds;
+        return outcome;
+      }
+      songTime.innerHTML = formatTime();
+  }
+  //Play and Pause
+  function play() {
+      // start music
+      if (audioEl.paused) {
+          audioEl.play();
+          // remove play, add pause
+          pButton.classList.remove("play");
+          pButton.classList.add("pause");
+      } else { // pause music
+          audioEl.pause();
+          // remove pause, add play
+          pButton.classList.remove("pause");
+          pButton.classList.add("play");
+      }
+  }
+
+  // Gets audio file duration
+  audioEl.addEventListener("canplaythrough", function() {
+      duration = audioEl.duration;
+  }, false);
+
+  // getPosition
+  // Returns elements left position relative to top-left of viewport
+  function getPosition(el) {
+      return el.getBoundingClientRect().left;
+  }
+}
+
+var firstAudio = document.getElementById("music1");
+var firstCustomAudio = document.getElementById("audioplayer1");
+var secondAudio = document.getElementById("music2");
+var secondCustomAudio = document.getElementById("audioplayer2");
+
+customAudioPlayer(firstAudio, firstCustomAudio);
+customAudioPlayer(secondAudio, secondCustomAudio);
+
 
 //nav
 function changePage(el) {

@@ -203,33 +203,49 @@
   <section id="recordings">
     <div class="recordings__container container">
       <div class="recordings__bg">
-        <div class="recordings__bg__mainPhoto-bg"></div>
-        <div class="recordings__bg__mainPhoto-bg-left"></div>
+        <!-- <div class="recordings__bg__mainPhoto-bg"></div> -->
+        <!-- <div class="recordings__bg__mainPhoto-bg-left"></div> -->
         <div class="recordings__bg__mainPhoto"></div>
       </div>
       <div class="recordings__content">
-        <h2 class="recordings__title">Nagrania</h2>
+        <h2 class="recordings__title">Posłuchaj nagrań</h2>
         <div class="recordings__audio">
           <div class="recordings__audio__item">
             <h4 class="recordings__audio__item__title">Haendel - Dejanira - Where shall I fly</h4>
-            <audio controls>
-                <source src="audio/where_shall_I_fly.mp3" type="audio/mpeg">
-                Twoja przeglądarka nie obsługuje formatu audio.
-            </audio>
+            <audio id="music1" preload="true">
+              <source src="audio/where_shall_I_fly.mp3">
+          	</audio>
+            <div id="audioplayer1" class="audioplayer">
+            	<button class="play pButton"></button>
+              <div class="timeline">
+              	<div class="playhead"></div>
+              </div>
+              <p class="showTime"></p>
+            </div>
           </div>
           <div class="recordings__audio__item">
             <h4 class="recordings__audio__item__title">Rossini - Tancredi - Di tanti palpiti</h4>
-            <audio controls>
+            <!-- <audio controls>
                 <source src="audio/di_tanti_palpiti.mp3" type="audio/mpeg">
                 Twoja przeglądarka nie obsługuje formatu audio.
-            </audio>
+            </audio> -->
+            <audio id="music2" preload="true">
+              <source src="audio/di_tanti_palpiti.mp3">
+          	</audio>
+            <div id="audioplayer2" class="audioplayer">
+            	<button class="play pButton"></button>
+              <div class="timeline">
+              	<div class="playhead"></div>
+              </div>
+              <p class="showTime"></p>
+            </div>
           </div>
           <div class="recordings__audio__item">
             <h4 class="recordings__audio__item__title">Britten - A cradle song</h4>
-            <audio controls>
+            <!-- <audio controls>
                 <source src="audio/britten_a_cradle_song.mp3" type="audio/mpeg">
                 Twoja przeglądarka nie obsługuje formatu audio.
-            </audio>
+            </audio> -->
           </div>
         </div>
       </div>
