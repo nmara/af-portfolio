@@ -4,14 +4,14 @@
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: space-between;
-  grid-row-gap: 1.5vw;
-  grid-column-gap: 1vw;
+  // grid-row-gap: 1vw;
+  // grid-column-gap: 1vw;
 }
 
 .gallery__photo {
   background-color: grey;
-  height: 32vw;
-  width: 32vw;
+  height: 33vw;
+  width: 33.33vw;
   cursor: pointer;
   color: #fff;
 }
@@ -82,7 +82,7 @@
     position: fixed;
     top: -70px;
     left: 0;
-    background-color: rgba(225, 225, 225, 0.95);
+    background-color: rgba(214, 182, 180, 0.9);
     z-index: 10000000000;
 }
 /* Modal Content */

@@ -1,5 +1,6 @@
 .contact__content {
-  margin-top: 30vh;
+  // margin-top: 30vh;
+  padding-top: 15vh;
   padding-bottom: 10vh;
   margin-bottom: 8vh;
   display: flex;
@@ -34,11 +35,12 @@
 }
 .contact__title {
   margin-bottom: 15vh;
-  font-size: 50px;
+  font-size: 38px;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 7px;
   width: 100%;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 .contact__details {
   display: flex;
@@ -51,26 +53,27 @@
   z-index: 1;
 }
 .contact__details__item {
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
   word-spacing: 0.1vw;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30vw;
-  height: 25vh;
+  height: 24vh;
   // border: 1px solid #000;
   // background-color: rgba(87, 100, 106, 0.5);
   // background-color: rgba(165, 92, 86, 0.5);
   // background-color: #D2ADAA;
   background-color: #fff;
-  -webkit-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
--moz-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
+  -webkit-box-shadow: 0px 10px 34px 0px rgba(165,92,86,0.7);
+  -moz-box-shadow: 0px 13px 34px 0px rgba(165,92,86,0.7);
+  box-shadow: 0px 10px 30px 0px rgba(165,92,86,0.7);
   i {
     font-size: 110px;
     margin-right: 4vw;
     color: #131218;
-    opacity: 0.9;
+    // color: rgba(165,92,86,0.8);
+    opacity: 0.5;
   }
   p {
     font-size: 20px;

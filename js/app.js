@@ -83,10 +83,23 @@ function customAudioPlayer(audioEl, customAudioEl) {
           playhead.style.marginLeft = timelineWidth + "px";
       }
   }
-  var songTime = customAudioEl.getElementsByClassName("showTime")[0];
+  var songTime = customAudioEl.getElementsByClassName("showCurrentTime")[0];
   songTime.innerHTML = "00:00";
   // timeUpdate
   // Synchronizes playhead position with current point in audio
+  function formatTime(el) {
+    var minutes = Math.floor(el / 60);
+    var seconds = Math.floor(el % 60);
+    if(minutes < 10) {
+      minutes = '0' + minutes;
+    }
+    if(seconds < 10) {
+      seconds = '0' + seconds;
+    }
+    var outcome = minutes + ":" + seconds;
+    return outcome;
+  }
+
   function timeUpdate() {
       var playPercent = timelineWidth * (audioEl.currentTime / duration);
       playhead.style.marginLeft = playPercent + "px";
@@ -95,22 +108,7 @@ function customAudioPlayer(audioEl, customAudioEl) {
         pButton.classList.add("play");
       }
       var showTime = Math.round(audioEl.currentTime);
-      function formatTime() {
-        var minutes = Math.floor(audioEl.currentTime / 60);
-        var seconds = Math.floor(audioEl.currentTime % 60);
-
-        if(minutes < 10) {
-          minutes = '0' + minutes;
-        }
-
-        if(seconds < 10) {
-          seconds = '0' + seconds;
-        }
-
-        var outcome = minutes + ":" + seconds;
-        return outcome;
-      }
-      songTime.innerHTML = formatTime();
+      songTime.innerHTML = formatTime(audioEl.currentTime);
   }
   //Play and Pause
   function play() {
@@ -131,8 +129,10 @@ function customAudioPlayer(audioEl, customAudioEl) {
   // Gets audio file duration
   audioEl.addEventListener("canplaythrough", function() {
       duration = audioEl.duration;
+      console.log(duration);
+      var songDuration = customAudioEl.getElementsByClassName("showDuration")[0];
+      songDuration.innerHTML = formatTime(duration);
   }, false);
-
   // getPosition
   // Returns elements left position relative to top-left of viewport
   function getPosition(el) {
@@ -140,14 +140,12 @@ function customAudioPlayer(audioEl, customAudioEl) {
   }
 }
 
-var firstAudio = document.getElementById("music1");
-var firstCustomAudio = document.getElementById("audioplayer1");
-var secondAudio = document.getElementById("music2");
-var secondCustomAudio = document.getElementById("audioplayer2");
+var allAudios = document.getElementsByTagName('audio');
+var allCustomAudios = document.getElementsByClassName('audioplayer');
 
-customAudioPlayer(firstAudio, firstCustomAudio);
-customAudioPlayer(secondAudio, secondCustomAudio);
-
+for (var i = 0; i < allAudios.length; i++) {
+  customAudioPlayer(allAudios[i], allCustomAudios[i]);
+}
 
 //nav
 function changePage(el) {

@@ -1,16 +1,25 @@
+#recordings {
+  background-color: rgba(165, 92, 86, 0.05);
+  // position: relative;
+  z-index: 1;
+}
 .recordings__container {
   display: flex;
-  padding-top: 20vh!important;
+  padding: 20vh 0;
   min-height: calc(100vh - 100px);
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  align-items: flex-start;
+  justify-content: flex-end;
+  // position: relative;
 }
 .recordings__bg {
   height: 100%;
-  width: 40%;
+  width: 45%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 5vw;
+  // position: absolute;
+  // top: 20vh;
+  // left: 0;
 }
 .recordings__bg__mainPhoto-bg {
   position: absolute;
@@ -37,49 +46,52 @@
   opacity: 0.2;
 }
 .recordings__bg__mainPhoto {
-  z-index: 3;
-  height: 37.5vw;
-  width: 25vw;
+  height: 42vw;
+  width: 100%;
   // margin-left: -12vw;
-  background: url("../img/audio--bg.jpg") no-repeat;
-  background-position: center;
+  background: url("../img/recordings_photo.jpg") no-repeat;
+  background-position: top center;
   background-size: cover;
   box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
   position: relative;
-  z-index: -1;
+  // z-index: -1;
 }
 .recordings__content {
   height: 100%;
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .recordings__title {
-  margin-bottom: 16vh;
-  font-size: 40px;
+  margin-bottom: 12vh;
+  font-size: 34px;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 7px;
   word-spacing: 20px;
   text-align: center;
+  padding-top: 6vh;
+  font-family: 'Raleway', sans-serif;
 }
 .recordings__audio {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .recordings__audio__item {
   margin-bottom: 8vh;
-  width: 100%;
-  background-color: #D6B6B4;
+  width: 80%;
+  // border: 0.1px solid #D6B6B4;
+  padding: 10px;
+  // background-color: #fff;
   .recordings__audio__item__title {
-    padding-bottom: 10vh;
-    margin-bottom: 1vh;
+    padding-bottom: 1vh;
     font-weight: 300;
     word-spacing: 0.1vw;
+    font-size: 18px;
   }
   // audio {
   //   width: 100%;
@@ -87,46 +99,63 @@
   // }
 }
 .audioplayer{
-	width: 480px;
-	height: 60px;
-	margin: 50px auto auto auto;
-  border: solid;
+	width: 100%;
+	height: 50px;
+	// margin: 50px auto auto auto;
+  // border: solid;
+  display: flex;
+  align-items: center;
+  // border: 0.1px solid #D6B6B4;
+  // padding-left: 10px;
+  // background-color: #fff;
 }
 
-.play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;}
-.pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
+.play{
+  background: url('../img/play-solid.svg');
+}
+.pause{
+  background: url('../img/pause-solid.svg');
+}
 
 .pButton{
     height:60px;
     width: 60px;
     border: none;
-    background-size: 50% 50%;
+    background-size: 35% 35%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center left;
     float:left;
     outline:none;
+    cursor: pointer;
 }
 
-.timeline{
-	width: 400px;
+.timeline {
+	width: 30vw;
 	height: 20px;
-	margin-top: 20px;
 	float: left;
-	border-radius: 15px;
-	background: rgba(0,0,0,.3);
-
+	// border-radius: 15px;
+	// background: rgba(255,255,255,.7);
+  background: rgba(214, 182, 180, 0.6);
+  margin-right: 20px;
 }
-.playhead{
+.playhead {
 	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	margin-top: 1px;
-	background: rgba(0, 0, 0,1);
-
+	height: 20px;
+	// border-radius: 50%;
+	background: rgba(214, 182, 180, 1);
+  cursor: pointer;
+}
+.showCurrentTime, .showDuration {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.showCurrentTime {
+  margin-right: 20px;
 }
 @media only screen and (max-width: 1600px) {
   .recordings__container {
-    padding: 12vh 0;
+    // padding: 12vh 0;
     align-items: flex-start;
   }
   .recordings__content {
