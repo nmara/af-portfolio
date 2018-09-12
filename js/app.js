@@ -1,6 +1,7 @@
 //scroll animation
 AOS.init();
 
+// AUDIO
 // stop audio if other is playing
 document.addEventListener('play', function(e){
     var audios = document.getElementsByTagName('audio');
@@ -14,6 +15,7 @@ document.addEventListener('play', function(e){
     }
 }, true);
 
+// Custom audio
 function customAudioPlayer(audioEl, customAudioEl) {
   // var music = document.getElementById('music'); // id for audio element
   var duration = audioEl.duration; // Duration of audio clip, calculated here for embedding purposes
@@ -148,10 +150,48 @@ for (var i = 0; i < allAudios.length; i++) {
 }
 
 //nav
-function changePage(el) {
-    var sectionName = el.getAttribute("data-nav");
-    var location = sectionName + ".html";
-    window.open(location, "_self");
+var navItems = document.getElementsByClassName('nav__item__link');
+var navHeight = 50;
+
+function removeActiveNav() {
+  for (var i = 0; i < navItems.length; i++) {
+    navItems[i].classList.remove("active");
+  }
+}
+
+window.addEventListener("scroll", function() {
+  var sections = document.getElementsByTagName('section');
+  var breakPoints = [];
+  for (var i = 0; i < sections.length; i++) {
+    breakPoints.push((sections[i].offsetTop)-navHeight);
+  }
+  for (var i = 0; i < sections.length; i++) {
+    if (window.pageYOffset >= breakPoints[i] && window.pageYOffset < breakPoints[i+1]) {
+      removeActiveNav();
+      navItems[i].classList.add("active");
+    } else if (i === (sections.length-1) && window.pageYOffset >= breakPoints[i]) {
+      removeActiveNav();
+      navItems[i].classList.add("active");
+    }
+  }
+})
+
+function scrollToSection(el) {
+  var sectionName = el.getAttribute("data-nav");
+  var section = document.getElementById(sectionName);
+  var position = section.offsetTop;
+  var scrollDestination;
+  if(section == document.getElementById("recordings")) {
+    scrollDestination = position - navHeight + (window.innerHeight*0.08);
+  } else {
+    scrollDestination = position - navHeight;
+  }
+
+  window.scrollTo({
+    top: scrollDestination,
+    left: 0,
+    behavior: 'smooth'
+  });
 }
 
 // Gallery

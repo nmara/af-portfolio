@@ -21,17 +21,20 @@
         </div>
         <div class="nav">
           <ul class="nav__content" id="nav-content">
-            <li class="nav__item"><a class="nav__item__link" href="index.html">Główna</a></li>
-            <li class="nav__item"><a class="nav__item__link" href="about.html">Biografia</a></li>
-            <li class="nav__item"><a class="nav__item__link" href="gallery.html">Galeria</a></li>
-            <li class="nav__item"><a class="nav__item__link" href="recordings.html">Nagrania</a></li>
-            <li class="nav__item"><a class="nav__item__link" href="contact.html">Kontakt</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="hero" onclick="scrollToSection(this)">Główna</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="about" onclick="scrollToSection(this)">Biografia</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="gallery" onclick="scrollToSection(this)">Galeria</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="recordings" onclick="scrollToSection(this)">Nagrania</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="contact" onclick="scrollToSection(this)">Kontakt</a></li>
           </ul>
         </div>
       </div>
+      <div class="languages">
+        <a href="">pl</a><a href="">en</a>
+      </div>
     </div>
   </header>
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-line"></div>
     <div class="hero__container">
       <div class="hero-bg"></div>

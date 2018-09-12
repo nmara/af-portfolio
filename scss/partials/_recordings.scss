@@ -1,77 +1,42 @@
 #recordings {
   background-color: rgba(165, 92, 86, 0.05);
-  // position: relative;
-  z-index: 1;
 }
 .recordings__container {
   display: flex;
-  padding: 20vh 0;
+  padding: 14vh 0;
   min-height: calc(100vh - 100px);
   align-items: flex-start;
   justify-content: flex-end;
-  // position: relative;
 }
 .recordings__bg {
   height: 100%;
   width: 45%;
-  display: flex;
-  align-items: flex-start;
   padding-left: 5vw;
-  // position: absolute;
-  // top: 20vh;
-  // left: 0;
-}
-.recordings__bg__mainPhoto-bg {
-  position: absolute;
-  top: 2vh;
-  right: -8%;
-  width: 0;
-  height: 0;
-  border-left: 75vw solid transparent;
-  // border-left: 20vw solid transparent;
-  border-top: 25vw solid #A55C56;
-  opacity: 0.3;
-  // z-index: -1;
-}
-.recordings__bg__mainPhoto-bg-left {
-  position: absolute;
-  top: -2vh;
-  left: -8%;
-  width: 0;
-  height: 0;
-  border-right: 45vw solid transparent;
-  // border-left: 20vw solid transparent;
-  // border-bottom: 15vw solid #A55C56;
-  border-top: 30vw solid #A55C56;
-  opacity: 0.2;
 }
 .recordings__bg__mainPhoto {
   height: 42vw;
   width: 100%;
-  // margin-left: -12vw;
   background: url("../img/recordings_photo.jpg") no-repeat;
   background-position: top center;
   background-size: cover;
   box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
-  position: relative;
-  // z-index: -1;
 }
 .recordings__content {
   height: 100%;
-  width: 55%;
+  width: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .recordings__title {
+  padding-top: 6vh;
   margin-bottom: 12vh;
   font-size: 34px;
   text-transform: uppercase;
   letter-spacing: 7px;
   word-spacing: 20px;
   text-align: center;
-  padding-top: 6vh;
   font-family: 'Raleway', sans-serif;
 }
 .recordings__audio {
@@ -83,65 +48,47 @@
 }
 .recordings__audio__item {
   margin-bottom: 8vh;
-  width: 80%;
-  // border: 0.1px solid #D6B6B4;
+  width: 44vw;
   padding: 10px;
-  // background-color: #fff;
   .recordings__audio__item__title {
     padding-bottom: 1vh;
     font-weight: 300;
     word-spacing: 0.1vw;
     font-size: 18px;
   }
-  // audio {
-  //   width: 100%;
-  //   background-color: #000;
-  // }
 }
 .audioplayer{
 	width: 100%;
 	height: 50px;
-	// margin: 50px auto auto auto;
-  // border: solid;
   display: flex;
   align-items: center;
-  // border: 0.1px solid #D6B6B4;
-  // padding-left: 10px;
-  // background-color: #fff;
 }
-
 .play{
   background: url('../img/play-solid.svg');
 }
 .pause{
   background: url('../img/pause-solid.svg');
 }
-
 .pButton{
-    height:60px;
-    width: 60px;
-    border: none;
-    background-size: 35% 35%;
-    background-repeat: no-repeat;
-    background-position: center left;
-    float:left;
-    outline:none;
-    cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  float:left;
+  outline:none;
+  cursor: pointer;
 }
-
 .timeline {
-	width: 30vw;
+	width: 31vw;
 	height: 20px;
 	float: left;
-	// border-radius: 15px;
-	// background: rgba(255,255,255,.7);
   background: rgba(214, 182, 180, 0.6);
-  margin-right: 20px;
 }
 .playhead {
-	width: 18px;
+	width: 20px;
 	height: 20px;
-	// border-radius: 50%;
 	background: rgba(214, 182, 180, 1);
   cursor: pointer;
 }
@@ -149,53 +96,46 @@
   font-weight: 300;
   letter-spacing: 1px;
   font-size: 14px;
+  width: 5vw;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .showCurrentTime {
-  margin-right: 20px;
+  width: 3.8vw;
+  text-align: left;
+  margin-left: 1.2vw;
 }
 @media only screen and (max-width: 1600px) {
   .recordings__container {
-    // padding: 12vh 0;
+    display: flex;
+    padding: 12vh 0;
+    min-height: calc(100vh - 50px);
     align-items: flex-start;
-  }
-  .recordings__content {
-    width: 60%;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .recordings__title {
-    margin-bottom: 10vh;
-    letter-spacing: 2px;
+    padding-top: 3vh;
   }
-  .recordings__audio {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 1100px) {
-  .recordings__container {
-    padding: 6vh 0;
-    align-items: flex-start;
-  }
-  .recordings__content {
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .recordings__title {
+  .recordings__audio__item {
     margin-bottom: 6vh;
-    letter-spacing: 2px;
   }
-  .recordings__audio {
-    width: 100%;
-  }
-  .recordings__bg {
-    display: none;
+  .recordings__audio__item:last-child {
+    margin-bottom: 0;
   }
 }
-@media only screen and (max-width: 800px) {
-  .recordings__container {
-    padding: 8vh 0 6vh;
-  }
+@media only screen and (max-width: 1400px) {
   .recordings__title {
-    margin-bottom: 10vh;
+    padding-top: 3vh;
+    margin-bottom: 8vh;
+  }
+  .recordings__audio__item {
+    margin-bottom: 5vh;
+    .recordings__audio__item__title {
+      padding-bottom: 0;
+    }
+  }
+  .recordings__audio__item:last-child {
+    margin-bottom: 0;
   }
 }
-// Audio zrobimy jako trójkąty nachodzące na siebie miejscami
