@@ -181,7 +181,7 @@ function scrollToSection(el) {
   var section = document.getElementById(sectionName);
   var position = section.offsetTop;
   var scrollDestination;
-  if(section == document.getElementById("recordings")) {
+  if(section == document.getElementById("recordings") && window.innerWidth > 1200) {
     scrollDestination = position - navHeight + (window.innerHeight*0.08);
   } else {
     scrollDestination = position - navHeight;
@@ -233,15 +233,15 @@ function showSlides(n) {
   var textContainer = document.querySelector('.caption_container');
   var photo = document.getElementsByClassName('modal__photo');
   var slideModal = document.getElementsByClassName('mySlides');
-  if (slideIndex-1 === 0 || slideIndex-1 === 1) {
+  if (slideIndex-1 === 6 || slideIndex-1 === 7) {
     textContainer.style.display = "none";
-    for (var i = 0; i < 2; i++) {
+    for (var i = 6; i < slideModal.length; i++) {
       slideModal[i].classList.add("photo-no-desc");
       photo[i].classList.add("photo-no-desc");
     }
   } else {
     textContainer.style.display = "flex";
-    for (var i = 2; i < slideModal.length; i++) {
+    for (var i = 0; i < 6; i++) {
       slideModal[i].classList.add("photo-with-desc");
       photo[i].classList.add("photo-with-desc");
     }

@@ -20,6 +20,12 @@
           <p>Anna Fijałkowska</p>
         </div>
         <div class="nav">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="nav_menu_bar_bg" id="nav-menu-bar-bg"></div>
           <ul class="nav__content" id="nav-content">
             <li class="nav__item"><a class="nav__item__link" data-nav="hero" onclick="scrollToSection(this)">Główna</a></li>
             <li class="nav__item"><a class="nav__item__link" data-nav="about" onclick="scrollToSection(this)">Biografia</a></li>
@@ -27,10 +33,13 @@
             <li class="nav__item"><a class="nav__item__link" data-nav="recordings" onclick="scrollToSection(this)">Nagrania</a></li>
             <li class="nav__item"><a class="nav__item__link" data-nav="contact" onclick="scrollToSection(this)">Kontakt</a></li>
           </ul>
+          <div class="languages mid">
+            <a href="index.html">pl</a><a href="en.html">en</a>
+          </div>
         </div>
       </div>
-      <div class="languages">
-        <a href="">pl</a><a href="">en</a>
+      <div class="languages big">
+        <a href="index.html">pl</a><a href="en.html">en</a>
       </div>
     </div>
   </header>
@@ -41,8 +50,9 @@
       <div class="hero-shape-bg-top"></div>
       <div class="hero-shape-bg-btm"></div>
       <div class="hero-logo">
-        <p>An<span style="transform: scaleX(-1);display:inline-block;filter: FlipH;margin-left: -15px;">n</span>a</p>
-        <span class="little-logo">Fijałkowska</span>
+        <!-- <p>An<span style="transform: scaleX(-1);display:inline-block;filter: FlipH;margin-left: -15px;">n</span>a</p>
+        <span class="little-logo">Fijałkowska</span> -->
+        <img src="img/logo.png" alt="">
       </div>
     </div>
   </section>
@@ -81,54 +91,54 @@
     <div class="gallery__container">
       <div class="gallery__photo" onclick="openModal();currentSlide(1)">
           <div class="description_background">
-            <p class="title" style="margin: 0;">Zobacz galerię</p>
-          </div>
-      </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(2)">
-          <div class="description_background">
-            <p class="title" style="margin: 0;">Zobacz galerię</p>
-          </div>
-      </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(3)">
-          <div class="description_background">
             <p class="gallery__photo__author">Bernstein</p>
             <p class="title">West Side Story</p>
             <p>FN Warszawa</p>
           </div>
       </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(4)">
+      <div class="gallery__photo" onclick="openModal();currentSlide(2)">
           <div class="description_background">
             <p class="gallery__photo__author">Monteverdi</p>
             <p class="title">Koronacja Poppei</p>
             <p>AT Warszawa</p>
           </div>
       </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(5)">
+      <div class="gallery__photo" onclick="openModal();currentSlide(3)">
           <div class="description_background">
             <p class="gallery__photo__author">Puccini</p>
             <p class="title">Siostra Angelica</p>
             <p>UMFC Warszawa</p>
           </div>
       </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(6)">
+      <div class="gallery__photo" onclick="openModal();currentSlide(4)">
           <div class="description_background">
             <p class="gallery__photo__author">Bach</p>
             <p class="title">Kantata</p>
             <p>UW Warszawa</p>
           </div>
       </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(7)">
+      <div class="gallery__photo" onclick="openModal();currentSlide(5)">
           <div class="description_background">
             <p class="gallery__photo__author">Britten</p>
             <p class="title">Sen nocy letniej</p>
             <p>Teatr Wielki Warszawa</p>
           </div>
       </div>
-      <div class="gallery__photo" onclick="openModal();currentSlide(8)">
+      <div class="gallery__photo" onclick="openModal();currentSlide(6)">
           <div class="description_background">
             <p class="gallery__photo__author">Sorozabal</p>
             <p class="title">La tabernera del puerto</p>
             <p>FN Warszawa</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(7)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Zobacz galerię</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(8)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Zobacz galerię</p>
           </div>
       </div>
     </div>
@@ -139,60 +149,60 @@
                 <div class="numbertext">1 / 8</div>
                 <img class="modal__photo" src="img/gallery-1.jpg">
                 <div class="description">
+                    <p class="description__title">Bernstein - West Side Story</p>
+                    <p class="description__place">FN Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">2 / 8</div>
                 <img class="modal__photo" src="img/gallery-2.jpg">
                 <div class="description">
+                  <p class="description__title">Monteverdi - Koronacja Poppei</p>
+                  <p class="description__place">AT Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">3 / 8</div>
                 <img class="modal__photo" src="img/gallery-3.jpg">
                 <div class="description">
-                    <p class="description__title">Bernstein - West Side Story</p>
-                    <p class="description__place">FN Warszawa</p>
+                  <p class="description__title">Puccini - Siostra Angelica</p>
+                  <p class="description__place">UMFC Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">4 / 8</div>
                 <img class="modal__photo" src="img/gallery-4.jpg">
                 <div class="description">
-                  <p class="description__title">Monteverdi - Koronacja Poppei</p>
-                  <p class="description__place">AT Warszawa</p>
+                  <p class="description__title">Bach - Kantata</p>
+                  <p class="description__place">UW Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">5 / 8</div>
                 <img class="modal__photo" src="img/gallery-5.jpg">
                 <div class="description">
-                  <p class="description__title">Puccini - Siostra Angelica</p>
-                  <p class="description__place">UMFC Warszawa</p>
+                  <p class="description__title">Britten - Sen nocy letniej</p>
+                  <p class="description__place">Teatr Wielki Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">6 / 8</div>
                 <img class="modal__photo" src="img/gallery-6.jpg">
                 <div class="description">
-                  <p class="description__title">Bach - Kantata</p>
-                  <p class="description__place">UW Warszawa</p>
+                  <p class="description__title">Sorozabal - La tabernera del puerto</p>
+                  <p class="description__place">FN Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">7 / 8</div>
                 <img class="modal__photo" src="img/gallery-7.jpg">
                 <div class="description">
-                  <p class="description__title">Britten - Sen nocy letniej</p>
-                  <p class="description__place">Teatr Wielki Warszawa</p>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">8 / 8</div>
                 <img class="modal__photo" src="img/gallery-8.jpg">
                 <div class="description">
-                  <p class="description__title">Sorozabal - La tabernera del puerto</p>
-                  <p class="description__place">FN Warszawa</p>
                 </div>
             </div>
             <div class="caption_container">
@@ -209,7 +219,7 @@
         <div class="recordings__bg__mainPhoto"></div>
       </div>
       <div class="recordings__content">
-        <h2 class="recordings__title">Posłuchaj nagrań</h2>
+        <h2 class="recordings__title">Nagrania</h2>
         <div class="recordings__audio">
           <div class="recordings__audio__item">
             <h4 class="recordings__audio__item__title">Haendel - Dejanira - Where shall I fly</h4>
@@ -223,6 +233,7 @@
               	<div class="playhead"></div>
               </div>
               <p class="showDuration"></p>
+              <a href="audio/where_shall_I_fly.mp3" download="Anna Fijałkowska - Where shall I fly"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
             </div>
           </div>
           <div class="recordings__audio__item">
@@ -237,6 +248,7 @@
               	<div class="playhead"></div>
               </div>
               <p class="showDuration"></p>
+              <a href="audio/di_tanti_palpiti.mp3" download="Anna Fijałkowska - Di tanti palpiti"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
             </div>
           </div>
           <div class="recordings__audio__item">
@@ -251,6 +263,7 @@
               	<div class="playhead"></div>
               </div>
               <p class="showDuration"></p>
+              <a href="audio/britten_a_cradle_song.mp3" download="Anna Fijałkowska - A Cradle Song"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
             </div>
           </div>
         </div>

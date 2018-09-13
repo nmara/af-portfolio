@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anna Fijałkowska (Fijalkowska) – mezzosopran, polska śpiewaczka solowa i ensamblowa. Specjalizuje się w wykonawstwie muzyki dawnej i współczesnej." />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anna Fijałkowska</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header__content">
+      <div class="container">
+        <div class="logo">
+          <p>Anna Fijałkowska</p>
+        </div>
+        <div class="nav">
+          <ul class="nav__content" id="nav-content">
+            <li class="nav__item"><a class="nav__item__link" data-nav="hero" onclick="scrollToSection(this)">Home</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="about" onclick="scrollToSection(this)">About</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="gallery" onclick="scrollToSection(this)">Gallery</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="recordings" onclick="scrollToSection(this)">Recordings</a></li>
+            <li class="nav__item"><a class="nav__item__link" data-nav="contact" onclick="scrollToSection(this)">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="languages">
+        <a href="index.html">pl</a><a href="en.html">en</a>
+      </div>
+    </div>
+  </header>
+  <section id="hero" class="hero">
+    <div class="hero-line"></div>
+    <div class="hero__container">
+      <div class="hero-bg"></div>
+      <div class="hero-shape-bg-top"></div>
+      <div class="hero-shape-bg-btm"></div>
+      <div class="hero-logo">
+        <p>An<span style="transform: scaleX(-1);display:inline-block;filter: FlipH;margin-left: -15px;">n</span>a</p>
+        <span class="little-logo">Fijałkowska</span>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="about__content">
+      <div class="container">
+        <div class="about__photo ipad">
+          <div class="about__photo__container">
+          </div>
+        </div>
+        <div class="about__bio">
+          <h2 class="about__title en">Anna Fijałkowska</h2>
+          <p class="about__desc en">
+            Graduated from the Fryderyk Chopin University of Music, Faculty of Musical Education with specialty in Church Music and from Faculty of Vocal Studies (with honors).
+          </p>
+          <p class="about__desc en">
+            During her studies she joined the National Philharmonic Choir. As a choir soloist, she worked with such conductors as: Antoni Wit, Henryk Wojnarowski, Massimiliano Caldi, Victor Pablo Perez, Łukasz Borowicz and Krzysztof Urbański.
+          </p>
+          <p class="about__desc en">
+            In 2014, she performed an alto solo part in the world premiere of Crying in the Wilderness by Alexander Raskatov (Istanbul, dir. Andres Mustonen).
+          </p>
+          <p class="about__desc en">
+            In June 2012 she debuted as Hippolyta in the student-made performance Midsummer Night’s Dream by Benjamin Britten in the Grand Theatre–National Opera.
+          </p>
+          <p class="about__desc en">
+            In February 2013 she played the part of Zia Principessa in the student body’s rendition of Giacomo Puccini’s Suor Angelica. In March 2014 she performed in the spectacle created in collaboration with the Directing Department of the Academy of Dramatic Art in Warsaw - Scenes from the Coronation of Poppea to the music of Claudio Monteverdi.
+          </p>
+          <p class="about__desc en">
+            For many years she has been working with the early music ensemble La Tempesta.
+          </p>
+          <p class="about__desc en">
+            Since autumn 2016 she has been collaborating with the Trondheim Vocalensamble.
+          </p>
+          <p class="about__desc en">
+            In 2012 she was the finalist of the nationwide 20th and 21st Century Music Competition for Young Performers. She participated in master classes conducted by Doris and Richard Cross, Anita Garanča, Urszula Kryger and Agnieszka Rehlis.
+          </p>
+          <div class="about__pdf">
+            <a href="pdf/Anna_Fijalkowska.pdf" target="_blank" class="about__pdf__btn">Download PDF</a>
+          </div>
+          <!-- <div class="about__bio-bg"></div> -->
+        </div>
+        <div class="about__bio-bg"></div>
+        <div class="about__photo regular">
+          <div class="about__photo__container">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="gallery__container">
+      <div class="gallery__photo" onclick="openModal();currentSlide(1)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Bernstein</p>
+            <p class="title">West Side Story</p>
+            <p>Warsaw Philharmonic</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(2)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Monteverdi</p>
+            <p class="title">The Coronation of Poppea</p>
+            <p>The Academy of Dramatic Art in Warsaw</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(3)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Puccini</p>
+            <p class="title">Sister Angelica</p>
+            <p>The Fryderyk Chopin University of Music Warsaw</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(4)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Bach</p>
+            <p class="title">Cantata</p>
+            <p>University of Warsaw</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(5)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Britten</p>
+            <p class="title">A Midsummer Night’s Dream</p>
+            <p>Grand Theatre-National Opera - Warsaw</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(6)">
+          <div class="description_background">
+            <p class="gallery__photo__author">Sorozabal</p>
+            <p class="title">La tabernera del puerto</p>
+            <p>Warsaw Philharmonic</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(7)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Gallery</p>
+          </div>
+      </div>
+      <div class="gallery__photo" onclick="openModal();currentSlide(8)">
+          <div class="description_background">
+            <p class="title" style="margin: 0;">Gallery</p>
+          </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal_content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 8</div>
+                <img class="modal__photo" src="img/gallery-1.jpg">
+                <div class="description">
+                    <p class="description__title">Bernstein - West Side Story</p>
+                    <p class="description__place">Warsaw Philharmonic</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 8</div>
+                <img class="modal__photo" src="img/gallery-2.jpg">
+                <div class="description">
+                  <p class="description__title">Monteverdi - The Coronation of Poppea</p>
+                  <p class="description__place">The Academy of Dramatic Art in Warsaw</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 8</div>
+                <img class="modal__photo" src="img/gallery-3.jpg">
+                <div class="description">
+                  <p class="description__title">Puccini - Sister Angelica</p>
+                  <p class="description__place">The Fryderyk Chopin University of Music - Warsaw</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 8</div>
+                <img class="modal__photo" src="img/gallery-4.jpg">
+                <div class="description">
+                  <p class="description__title">Bach - Cantata</p>
+                  <p class="description__place">University of Warsaw</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 8</div>
+                <img class="modal__photo" src="img/gallery-5.jpg">
+                <div class="description">
+                  <p class="description__title">Britten - A Midsummer Night’s Dream</p>
+                  <p class="description__place">Grand Theatre-National Opera - Warsaw</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img class="modal__photo" src="img/gallery-6.jpg">
+                <div class="description">
+                  <p class="description__title">Sorozabal - La tabernera del puerto</p>
+                  <p class="description__place">Warsaw Philharmonic</p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img class="modal__photo" src="img/gallery-7.jpg">
+                <div class="description">
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img class="modal__photo" src="img/gallery-8.jpg">
+                <div class="description">
+                </div>
+            </div>
+            <div class="caption_container">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+  <section id="recordings">
+    <div class="recordings__container">
+      <div class="recordings__bg">
+        <div class="recordings__bg__mainPhoto"></div>
+      </div>
+      <div class="recordings__content">
+        <h2 class="recordings__title">Recordings</h2>
+        <div class="recordings__audio">
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Haendel - Dejanira - Where shall I fly</h4>
+            <audio id="music1" preload="true">
+              <source src="audio/where_shall_I_fly.mp3">
+          	</audio>
+            <div id="audioplayer1" class="audioplayer">
+            	<button class="play pButton"></button>
+              <p class="showCurrentTime"></p>
+              <div class="timeline">
+              	<div class="playhead"></div>
+              </div>
+              <p class="showDuration"></p>
+              <a href="audio/where_shall_I_fly.mp3" download="Anna Fijałkowska - Where shall I fly"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
+            </div>
+          </div>
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Rossini - Tancredi - Di tanti palpiti</h4>
+            <audio id="music2" preload="true">
+              <source src="audio/di_tanti_palpiti.mp3">
+          	</audio>
+            <div id="audioplayer2" class="audioplayer">
+            	<button class="play pButton"></button>
+              <p class="showCurrentTime"></p>
+              <div class="timeline">
+              	<div class="playhead"></div>
+              </div>
+              <p class="showDuration"></p>
+              <a href="audio/di_tanti_palpiti.mp3" download="Anna Fijałkowska - Di tanti palpiti"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
+            </div>
+          </div>
+          <div class="recordings__audio__item">
+            <h4 class="recordings__audio__item__title">Britten - A cradle song</h4>
+            <audio id="music3" preload="true">
+              <source src="audio/britten_a_cradle_song.mp3">
+          	</audio>
+            <div id="audioplayer3" class="audioplayer">
+            	<button class="play pButton"></button>
+              <p class="showCurrentTime"></p>
+              <div class="timeline">
+              	<div class="playhead"></div>
+              </div>
+              <p class="showDuration"></p>
+              <a href="audio/britten_a_cradle_song.mp3" download="Anna Fijałkowska - A Cradle Song"><img src="img/download-solid.svg" alt="" class="download-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact__content">
+      <h2 class="contact__title">Contact</h2>
+      <div class="contact__details">
+          <div class="contact__details__item">
+            <i class="fas fa-mobile-alt"></i>
+            <p class="contact__details__desc">+48 605 105 426</p>
+          </div>
+          <div class="contact__details__item">
+            <i class="fas fa-envelope"></i>
+            <p class="contact__details__desc">fijalkowska.anna@gmail.com</p>
+          </div>
+      </div>
+      <div class="contact__bg-top"></div>
+      <div class="contact__bg-btm"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer__container">
+      <div class="footer__text container">
+        <p><a href="https://github.com/nmara" target="_blank">Website by Agnieszka Czekała</a></p>
+        <p><a href="http://shuum.pl/" target="_blank">Photo by shuum</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="node_modules/aos/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

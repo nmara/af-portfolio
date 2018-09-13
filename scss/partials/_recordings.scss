@@ -1,75 +1,84 @@
 #recordings {
-  background-color: rgba(165, 92, 86, 0.05);
+  // background-color: rgba(165, 92, 86, 0.05);
 }
 .recordings__container {
   display: flex;
-  padding: 14vh 0;
+  padding: 14vh 5vw 14vh 0;
   min-height: calc(100vh - 100px);
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  // background-color: rgba(165, 92, 86, 0.05);
 }
 .recordings__bg {
   height: 100%;
-  width: 45%;
-  padding-left: 5vw;
+  width: 28vw;
+  margin: 0 5vw 0 10vw;
 }
 .recordings__bg__mainPhoto {
   height: 42vw;
   width: 100%;
-  background: url("../img/recordings_photo.jpg") no-repeat;
-  background-position: top center;
+  background: url("../img/audio--bg.jpg") no-repeat;
+  background-position: center;
   background-size: cover;
   box-shadow: 1vw 1.8vw 4vw -.7vw rgba(0,0,0,.2);
+  transition: background-size 1s;
 }
 .recordings__content {
   height: 100%;
-  width: 55vw;
+  width: 47vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  padding: 3vw;
+  // border: 1px solid red;
+  background-color: rgba(165, 92, 86, 0.05);
+  // background-color: #fff;
+  // border: 3px solid rgba(165, 92, 86, 0.2);
 }
 .recordings__title {
-  padding-top: 6vh;
-  margin-bottom: 12vh;
-  font-size: 34px;
+  width: 100%;
+  padding-top: 0;
+  margin-bottom: 10vh;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 7px;
   word-spacing: 20px;
-  text-align: center;
+  text-align: left;
   font-family: 'Raleway', sans-serif;
 }
 .recordings__audio {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .recordings__audio__item {
-  margin-bottom: 8vh;
-  width: 44vw;
-  padding: 10px;
+  margin-bottom: 6vh;
+  width: 100%;
+  padding: 0;
   .recordings__audio__item__title {
     padding-bottom: 1vh;
     font-weight: 300;
     word-spacing: 0.1vw;
-    font-size: 18px;
+    font-size: 15px;
+    text-transform: uppercase;
   }
 }
-.audioplayer{
+.audioplayer {
 	width: 100%;
-	height: 50px;
+	height: 20px;
   display: flex;
   align-items: center;
 }
-.play{
+.play {
   background: url('../img/play-solid.svg');
 }
-.pause{
+.pause {
   background: url('../img/pause-solid.svg');
 }
-.pButton{
+.pButton {
   height: 1vw;
   width: 1vw;
   border: none;
@@ -81,14 +90,14 @@
   cursor: pointer;
 }
 .timeline {
-	width: 31vw;
-	height: 20px;
+	width: 30vw;
+	height: 2px;
 	float: left;
   background: rgba(214, 182, 180, 0.6);
 }
 .playhead {
 	width: 20px;
-	height: 20px;
+	height: 2px;
 	background: rgba(214, 182, 180, 1);
   cursor: pointer;
 }
@@ -106,36 +115,255 @@
   text-align: left;
   margin-left: 1.2vw;
 }
+.download-btn {
+  width: 1.2vw;
+  height: 1.2vw;
+}
 @media only screen and (max-width: 1600px) {
-  .recordings__container {
-    display: flex;
-    padding: 12vh 0;
-    min-height: calc(100vh - 50px);
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
-  .recordings__title {
-    padding-top: 3vh;
-  }
-  .recordings__audio__item {
-    margin-bottom: 6vh;
-  }
-  .recordings__audio__item:last-child {
-    margin-bottom: 0;
-  }
+  // .recordings__container {
+  //   display: flex;
+  //   padding: 12vh 0;
+  //   min-height: calc(100vh - 50px);
+  //   align-items: flex-start;
+  //   justify-content: flex-end;
+  // }
+  // .recordings__title {
+  //   padding-top: 3vh;
+  // }
+  // .recordings__audio__item {
+  //   margin-bottom: 6vh;
+  // }
+  // .recordings__audio__item:last-child {
+  //   margin-bottom: 0;
+  // }
 }
 @media only screen and (max-width: 1400px) {
   .recordings__title {
-    padding-top: 3vh;
-    margin-bottom: 8vh;
+    padding-top: 0;
+    margin-bottom: 10vh;
   }
   .recordings__audio__item {
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
     .recordings__audio__item__title {
       padding-bottom: 0;
     }
   }
   .recordings__audio__item:last-child {
     margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .timeline {
+  	width: 38vw;
+  }
+  .showCurrentTime, .showDuration {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    width: 8vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .showCurrentTime {
+    width: 5.5vw;
+    text-align: left;
+    margin-left: 1.2vw;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #recordings {
+    background-color: rgba(165, 92, 86, 0.05);
+  }
+  .recordings__container {
+    flex-direction: column-reverse;
+    padding: 10vh 0 15vh;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+  }
+  .recordings__title {
+    padding-top: 0;
+    margin-bottom: 8vh;
+    text-align: center;
+    font-size: 38px;
+  }
+  .recordings__bg {
+    display: none;
+  }
+  .recordings__bg__mainPhoto {
+    margin: 0 auto;
+    height: 42vw;
+    width: 42vw;
+  }
+  .recordings__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+    background: none;
+  }
+  .audioplayer {
+    height: auto;
+    padding-top: 10px;
+  }
+  .pButton {
+    height: 2vw;
+    width: 2vw;
+  }
+  .timeline {
+  	width: 72%;
+    height: 20px;
+    background: none;
+    border-bottom: 1px solid rgba(214, 182, 180, 1);
+  }
+  .playhead {
+  	width: 20px;
+  	height: 20px;
+  }
+  .showCurrentTime, .showDuration {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    width: 8vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .showCurrentTime {
+    width: 10%;
+    text-align: left;
+    margin-left: 4%;
+  }
+  .download-btn {
+    width: 2.2vw;
+    height: 2.2vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .showCurrentTime, .showDuration {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    width: 13vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .showCurrentTime {
+    width: 12%;
+    text-align: left;
+    margin-left: 4%;
+  }
+  .download-btn {
+    width: 3vw;
+    height: 3vw;
+  }
+  .pButton {
+    height: 3vw;
+    width: 3vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #recordings {
+    background-color: rgba(165, 92, 86, 0.02);
+  }
+  .recordings__container {
+    padding: 14vh 0 0;
+    // background-color: #f3f3f3;
+  }
+  .recordings__title {
+    padding-top: 0;
+    margin-bottom: 10vh;
+    font-size: 30px;
+    line-height: 40px;
+    width: 100%;
+    letter-spacing: 4px;
+  }
+  .recordings__bg {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 16vh;
+  }
+  .recordings__bg__mainPhoto {
+    margin: 0 auto;
+    height: 150vw;
+    width: 100%;
+    background: url("../img/audio--bg.jpg") no-repeat;
+    background-position: top center;
+    background-size: cover;
+    box-shadow: none;
+  }
+  .recordings__audio__item {
+    margin-bottom: 8vh;
+    width: 100%;
+    padding: 0;
+    .recordings__audio__item__title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+  .recordings__content {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .audioplayer {
+  	width: 100%;
+  	height: 50px;
+  }
+  .pButton {
+    height: 4vw;
+    width: 4vw;
+  }
+  .timeline {
+  	width: 53%;
+    height: 10px;
+    background: none;
+    border-bottom: 1px solid rgba(214, 182, 180, 1);
+  }
+  .playhead {
+  	width: 20px;
+  	height: 10px;
+  }
+  .showCurrentTime, .showDuration {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    width: 18vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .showCurrentTime {
+    width: 16%;
+    text-align: left;
+    margin-left: 4%;
+  }
+  .download-btn {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+}
+@media screen and (orientation:landscape) and (max-width: 1000px) {
+  .recordings__audio__item {
+    margin-bottom: 14vh;
+  }
+  .recordings__content {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+  .recordings__title {
+    margin-bottom: 15vh;
   }
 }

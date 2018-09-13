@@ -11,9 +11,6 @@
   box-shadow: 0px -3px 10px -1px rgba(0,0,0,0.6);
 }
 .languages {
-  position: absolute;
-  top: 5px;
-  right: 10px;
   a {
     margin: 0;
     padding: 3px 8px;
@@ -32,6 +29,14 @@
     background-color: #000;
     color: #fff;
   }
+}
+.languages.big {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.languages.mid {
+  display: none;
 }
 .header__content .container {
   height: 100%;
@@ -57,4 +62,25 @@
 }
 .nav__item .nav__item__link.active {
   font-weight: 500;
+}
+@media only screen and (max-width: 1600px) {
+  .nav {
+    display: flex;
+  }
+  .languages.big {
+    display: none;
+  }
+  .languages.mid {
+    display: flex;
+    margin-left: 3vw;
+    a:last-child {
+      padding-right: 0;
+    }
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .nav {
+    display: none;
+    list-style: none;
+  }
 }
